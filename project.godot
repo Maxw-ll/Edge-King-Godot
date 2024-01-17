@@ -64,7 +64,6 @@ _global_script_class_icons={
 
 config/name="Edge King Godot"
 run/main_scene="res://Scenes/UI/home_windoww.tscn"
-config/icon="res://icon.png"
 
 [autoload]
 
@@ -86,7 +85,7 @@ icone=false
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
-theme/custom="res://theme_edge_king.tres"
+theme/custom="res://Themes/theme_edge_king.tres"
 
 [input]
 
