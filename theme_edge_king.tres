@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=5 format=2]
+
+[ext_resource path="res://Panel_base.png" type="Texture" id=1]
+[ext_resource path="res://thaleah_fat.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 96, 96 )
+margin_left = 24.0
+margin_right = 24.0
+margin_top = 24.0
+margin_bottom = 24.0
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 2 )
+
+[resource]
+default_font = SubResource( 3 )
+Label/colors/font_color = Color( 0, 0, 0, 1 )
+PanelContainer/styles/panel = SubResource( 2 )

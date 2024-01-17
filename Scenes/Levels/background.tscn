@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Enviroment/background_1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Enviroment/background_3.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Enviroment/background_2.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/UI/background.gd" type="Script" id=5]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource( 5 )
+layer_speed = [ 20, 30, 40 ]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 800, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
+margin_right = 256.0
+margin_bottom = 224.0
+rect_scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 800, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer2"]
+margin_right = 256.0
+margin_bottom = 224.0
+rect_scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 800, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer3"]
+margin_right = 256.0
+margin_bottom = 224.0
+rect_scale = Vector2( 3, 3 )
+texture = ExtResource( 3 )
