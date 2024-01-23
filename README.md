@@ -1,5 +1,7 @@
 Meu primeiro jogo feito em Python, agora na feito na Godot engine. 
 
+Disponível em: https://maxw-ll.itch.io/edge-king
+
 Funcionando na Godot Stable 3.5
 
 Importação: Abrir a Godot e importar o arquivo project.godot caso queira editar o projeto
