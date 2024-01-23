@@ -15,4 +15,4 @@ Elementos adicionados comparando com a versão em Python:
  -> Background animado
  -> Animações na Tela Inicial
 
-Não caia no vazio XD
+Não caia no vazio XD.
