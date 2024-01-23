@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Blocos/red_cube.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player/player.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/Effects/Step.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/Effects/Die.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/Effects/Teleport.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/Effects/Win.wav" type="AudioStream" id=6]
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 7.07107
@@ -38,6 +42,18 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEntered"]
 position = Vector2( 0, 16 )
 shape = SubResource( 4 )
+
+[node name="MoveFx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="DieFx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+
+[node name="TeleportFx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Win" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
 
 [connection signal="body_exited" from="AreaExited" to="." method="_on_AreaExited_body_exited"]
 [connection signal="body_entered" from="AreaEntered" to="." method="_on_Area2D_body_entered"]

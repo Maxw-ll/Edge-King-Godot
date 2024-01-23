@@ -14,6 +14,7 @@ func _physics_process(_delta: float) -> void:
 		queue_free()
 		get_parent().drawmap()
 		
+		
 
 	
 
@@ -21,15 +22,20 @@ func move_inputs() -> void:
 	if Input.is_action_just_pressed("ui_right"):
 		position.x += 22
 		position.y -= 11
+		$MoveFx.play()
 	elif Input.is_action_just_pressed("ui_left"):
 		position.x -= 22
 		position.y += 11
+		$MoveFx.play()
 	elif Input.is_action_just_pressed("ui_up"):
 		position.x -= 22
 		position.y -= 11
+		$MoveFx.play()
 	elif Input.is_action_just_pressed("ui_down"):
 		position.x += 22
 		position.y += 11
+		$MoveFx.play()
+	
 	
 
 
@@ -39,7 +45,7 @@ func teleport(body: Node) -> void:
 			for portals in get_tree().get_nodes_in_group("portal"):
 				portals.can_teleport = false
 			global_position = portal.global_position - Vector2(0.0,9.0)
-
+			$TeleportFx.play()
 
 					
 
@@ -60,6 +66,10 @@ func _on_Area2D_body_entered(body):
 					queue_free()
 					get_parent().current_level += 1
 					get_parent().drawmap()
+				
+					
+					
+					
 
 func _on_AreaExited_body_exited(body):
 	colision_ref = null
@@ -83,9 +93,8 @@ func gravity(delta: float) -> void:
 	velocity.y += delta*100
 	
 			
+
 	
+		
 
-
-
-
-
+	

@@ -3,10 +3,11 @@ extends Control
 class_name Menu
 
 onready var button_continue = get_node("Control/VBoxContainer/Continue")
-
-
+const LEVEL: PackedScene = preload("res://Scenes/Levels/level.tscn")
+var level = LEVEL.instance()
 
 func _ready() -> void:
+	
 	var file: File = File.new()
 	if !file.file_exists("user://save.dat"):
 		button_continue.disabled = true
@@ -23,9 +24,11 @@ func on_button_pressed(button: Button) -> void:
 			Files.game_data["Level"] = 1
 			Files.game_data["Timer"] = 0
 			Files.save_data()
-			var _n = get_tree().change_scene("res://Scenes/Levels/level.tscn")
+			get_parent().call_deferred("add_child", level)
+			queue_free()
 		"Continue":
-			var _n = get_tree().change_scene("res://Scenes/Levels/level.tscn")
+			get_parent().call_deferred("add_child", level)
+			queue_free()
 		"Controls":
 			pass
 		"Exit":
