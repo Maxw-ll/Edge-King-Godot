@@ -5,12 +5,13 @@ const BLACK: PackedScene = preload("res://Scenes/Blocos/black_floor.tscn")
 const BLUE: PackedScene =  preload("res://Scenes/Blocos/blue_floor.tscn")
 const RED: PackedScene =   preload("res://Scenes/Blocos/red_floor.tscn")
 const CUBO: PackedScene = preload("res://Scenes/Player/player.tscn")
-
+const CREDITOS: PackedScene = preload("res://Scenes/UI/credits.tscn")
 
 var current_level: int = 1
 var pisos_totais: int = 0
 var begin_map: Vector2 = Vector2(600, 150)
 var cubo = CUBO.instance()
+
 
 export onready var maps: Node = get_node("Levels")
 var mapa: Array = []
@@ -28,7 +29,12 @@ func _ready() -> void:
 
 func drawmap() -> void:
 	
-	
+	if current_level > 30:
+		var credits = CREDITOS.instance()
+		get_parent().call_deferred("add_child", credits)
+		queue_free()
+		return
+
 	pisos_totais = 0
 	
 	for index in get_child_count():

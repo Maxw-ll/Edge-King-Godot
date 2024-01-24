@@ -35,8 +35,13 @@ func move_inputs() -> void:
 		position.x += 21
 		position.y += 21
 		$MoveFx.play()
-	
-	
+
+	#Para testar fases determinadas do jogo e passar delas
+	#elif Input.is_action_just_pressed("ui_next_level"):
+		#Global.level_was_updated()
+		#queue_free()
+		#get_parent().current_level += 1
+		#get_parent().drawmap()
 
 
 func teleport(body: Node) -> void:
