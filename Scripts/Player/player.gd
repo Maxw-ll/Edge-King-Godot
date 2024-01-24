@@ -44,7 +44,7 @@ func teleport(body: Node) -> void:
 		if portal != body.get_parent() and portal.can_teleport == true:
 			for portals in get_tree().get_nodes_in_group("portal"):
 				portals.can_teleport = false
-			global_position = portal.global_position - Vector2(0.0,9.0)
+			global_position = portal.global_position - Vector2(0.0,12.0)
 			$TeleportFx.play()
 
 					

@@ -12,10 +12,14 @@ anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.196078 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 349.0
-margin_top = 245.0
-margin_right = 451.0
-margin_bottom = 355.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -51.0
+margin_top = -55.0
+margin_right = 51.0
+margin_bottom = 55.0
 
 [node name="Resume" type="Button" parent="VBoxContainer" groups=["pause_button"]]
 margin_right = 102.0
@@ -23,13 +27,14 @@ margin_bottom = 34.0
 text = "resume"
 
 [node name="Menu" type="Button" parent="VBoxContainer" groups=["pause_button"]]
+visible = false
 margin_top = 38.0
 margin_right = 102.0
 margin_bottom = 72.0
 text = "menu"
 
 [node name="Exit" type="Button" parent="VBoxContainer" groups=["pause_button"]]
-margin_top = 76.0
+margin_top = 38.0
 margin_right = 102.0
-margin_bottom = 110.0
+margin_bottom = 72.0
 text = "exit"
