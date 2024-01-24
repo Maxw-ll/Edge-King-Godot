@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blue_floor.png-14a9bc149cfb582cf6762c04a4409718.stex"
+path="res://.import/black_floor.png-b2a8c28080b8140924988be92d7e3c80.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blocos/blue_floor.png"
-dest_files=[ "res://.import/blue_floor.png-14a9bc149cfb582cf6762c04a4409718.stex" ]
+source_file="res://Assets/Blocos/New_Iso/black_floor.png"
+dest_files=[ "res://.import/black_floor.png-b2a8c28080b8140924988be92d7e3c80.stex" ]
 
 [params]
 

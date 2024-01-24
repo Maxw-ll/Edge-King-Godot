@@ -20,20 +20,20 @@ func _physics_process(_delta: float) -> void:
 
 func move_inputs() -> void:
 	if Input.is_action_just_pressed("ui_right"):
-		position.x += 22
-		position.y -= 11
+		position.x += 30
+		position.y -= 15
 		$MoveFx.play()
 	elif Input.is_action_just_pressed("ui_left"):
-		position.x -= 22
-		position.y += 11
+		position.x -= 30
+		position.y += 15
 		$MoveFx.play()
 	elif Input.is_action_just_pressed("ui_up"):
-		position.x -= 22
-		position.y -= 11
+		position.x -= 21
+		position.y -= 21
 		$MoveFx.play()
 	elif Input.is_action_just_pressed("ui_down"):
-		position.x += 22
-		position.y += 11
+		position.x += 21
+		position.y += 21
 		$MoveFx.play()
 	
 	

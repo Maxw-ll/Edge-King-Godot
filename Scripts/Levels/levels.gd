@@ -9,7 +9,7 @@ const CUBO: PackedScene = preload("res://Scenes/Player/player.tscn")
 
 var current_level: int = 1
 var pisos_totais: int = 0
-var begin_map: Vector2 = Vector2(440, 150)
+var begin_map: Vector2 = Vector2(600, 150)
 var cubo = CUBO.instance()
 
 export onready var maps: Node = get_node("Levels")
@@ -45,7 +45,7 @@ func drawmap() -> void:
 		for celula in linha:
 			if celula == '1' or celula == '5' or celula == "2":
 				var white = WHITE.instance()
-				white.global_position = Vector2(begin_map.x + 22*x - 22*y, begin_map.y + 11*x + 11*y)
+				white.global_position = Vector2(begin_map.x + 21*x - 30*y, begin_map.y + 21*x + 15*y)
 				call_deferred("add_child",  white) 
 				if celula == "2":
 					white.white_and_black = 1
@@ -53,24 +53,24 @@ func drawmap() -> void:
 
 			if celula == '2':
 				var black = BLACK.instance()
-				black.global_position = Vector2(begin_map.x + 22*x - 22*y, begin_map.y + 11*x + 11*y)
+				black.global_position = Vector2(begin_map.x + 21*x - 30*y, begin_map.y + 21*x + 15*y)
 				call_deferred("add_child",  black)
 				
 			if celula == '3':
 				var blue = BLUE.instance()
-				blue.global_position = Vector2(begin_map.x + 22*x - 22*y, begin_map.y + 11*x + 11*y)
+				blue.global_position = Vector2(begin_map.x + 21*x - 30*y, begin_map.y + 21*x + 15*y)
 				call_deferred("add_child",  blue)
 				pisos_totais += 1
 
 			if celula == '4':
 				var red = RED.instance()
-				red.global_position = Vector2(begin_map.x + 22*x - 22*y, begin_map.y + 11*x + 11*y)
+				red.global_position = Vector2(begin_map.x + 21*x - 30*y, begin_map.y + 21*x + 15*y)
 				call_deferred("add_child",  red)
 		
 				
 			if celula == '5':
 				cubo = CUBO.instance()
-				cubo.global_position = Vector2(begin_map.x + 22*x - 22*y, begin_map.y - 9 + 11*x + 11*y)
+				cubo.global_position = Vector2(begin_map.x + 21*x - 30*y, begin_map.y - 12 + 21*x + 15*y)
 				call_deferred("add_child",  cubo)
 		
 			x += 1

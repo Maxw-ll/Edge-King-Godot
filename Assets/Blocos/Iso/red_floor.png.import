@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/red_cube.png-32a7860c49a0215162f2ec0e152310b7.stex"
+path="res://.import/red_floor.png-24c4f615356404926f9a8b28387fd5d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Blocos/red_cube.png"
-dest_files=[ "res://.import/red_cube.png-32a7860c49a0215162f2ec0e152310b7.stex" ]
+source_file="res://Assets/Blocos/Iso/red_floor.png"
+dest_files=[ "res://.import/red_floor.png-24c4f615356404926f9a8b28387fd5d5.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

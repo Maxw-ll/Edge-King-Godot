@@ -15,28 +15,31 @@ anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2( 800, 0 )
+motion_mirroring = Vector2( 1000, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
-margin_right = 256.0
-margin_bottom = 224.0
+margin_right = 333.0
+margin_bottom = 266.0
 rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 2 )
+stretch_mode = 1
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2( 800, 0 )
+motion_mirroring = Vector2( 1000, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer2"]
-margin_right = 256.0
-margin_bottom = 224.0
+margin_right = 333.0
+margin_bottom = 266.0
 rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 4 )
+stretch_mode = 1
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2( 800, 0 )
+motion_mirroring = Vector2( 1000, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxLayer3"]
-margin_right = 256.0
-margin_bottom = 224.0
+margin_right = 333.0
+margin_bottom = 266.0
 rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
+stretch_mode = 1
