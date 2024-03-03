@@ -1,4 +1,4 @@
-Meu primeiro jogo feito em Python, agora na feito na Godot engine. 
+Meu primeiro jogo feito em Python, agora feito na Godot engine. 
 
 Disponível em: https://maxw-ll.itch.io/edge-king
 
